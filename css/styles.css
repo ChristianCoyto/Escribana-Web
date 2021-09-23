@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: auto;
+	background-color: black;
+	font-family: calibri;
+	display: grid;
+	grid-template-areas: "nav" "header" "main" "footer";
+}
+
+nav {
+	width: 100%;
+	height: auto;
+	background-color: rgba(0, 0, 0, 0.61);
+	position: fixed;
+	box-shadow: 0 0 20px black;
+	z-index: 100;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	grid-area: nav;
+	display: grid;
+	grid-template-areas: "sabrina ul";
+}
+
+.check-btn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	cursor: pointer;
+	display: none;
+	grid-area: check-btn;
+}
+
+#check {
+	display: none;
+}
+
+ul {
+	width: 768px;
+	height: 30px;
+	display: flex;
+	margin: 0;
+	justify-content: space-between;
+	align-items: center;
+	grid-area: ul;
+	transition: 1s;
+}
+
+.sabrina {
+	min-width: 173px;
+	cursor: pointer;
+	grid-area: sabrina;
+}
+
+.sabrina h1 {
+	margin-bottom: 0;
+}
+
+.sabrina h2 {
+	padding-top: 5px;
+}
+
+nav h1 {
+	color: #fff;
+	font-family: 'Parisienne', cursive;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 5px;
+}
+
+nav h2 {
+	color: white;
+	font-family: 'Parisienne', cursive;
+	font-size: 1.1em;
+	padding-bottom: 5px;
+	text-align: center;
+	border-top: 1px solid rgba(243, 236, 236, 0.596);
+}
+
+ul li {
+	width: 115px;
+	height: 30px;
+	background-image: linear-gradient(to left, #1e130c00, #9a84788c);
+	list-style: none;
+	color: white;
+	letter-spacing: 0.5px;
+	border-radius: 7px;
+	margin-left: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul li:hover {
+	background-image: linear-gradient(to right, #1e130c00, #9a84788c);
+}
+
+li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+li a:hover {
+	color: #fff;
+}
+
+header {
+	width: 100%;
+	height: 350px;
+	background-color: transparent;
+	position: relative;
+	background-image: url(../imagenes/banner-fondo3.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	grid-area: header;
+}
+
+#logo {
+	width: 280px;
+	height: 267px;
+	position: absolute;
+	top: 85px;
+	left: 5%;
+}
+
+#logo img {
+	width: 260px;
+	height: auto;
+	border-radius: 50%;
+	opacity: 0.5;
+}
+
+main {
+	width: 100%;
+	height: 850px;
+	background-image: url(/imagenes/fondo.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	grid-area: main;
+	display: grid;
+	gap: 15px;
+	grid-template-areas: "bloque1 bloque2 bloque3" "banner banner banner";
+	grid-template-columns: 1fr 2fr 1fr;
+}
+
+#bloque1 {
+	width: 100%;
+	min-width: 201px;
+	height: 590px;
+	background-color: #111010;
+	color: white;
+	padding: 0 10px;
+	grid-area: bloque1;
+	margin: 0;
+}
+
+#bloque1 h1, h2 {
+	margin: 0;
+}
+
+#bloque1 h1 {
+	text-align: center;
+}
+
+#bloque1 h2 {
+	text-align: center;
+}
+
+#bloque1 img {
+	width: 100%;
+	margin-top: 30px;
+}
+
+#bloque1 p {
+	text-align: justify;
+	margin: 0;
+}
+
+#bloque1 a {
+	color: #7474f1;
+	text-decoration: none;
+}
+
+#bloque2 {
+	width: 100%;
+	height: 590px;
+	background-image: url(../imagenes/sucesion.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	grid-area: bloque2;
+}
+
+#placa1 {
+	width: 100%;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top: 200px;
+}
+
+#placa1 h1 {
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	line-height: 75px;
+	text-shadow: 3px 3px 7px black;
+}
+
+#placa1 h2 {
+	color: #fff;
+	text-align: center;
+	line-height: 5px;
+	text-shadow: 3px 3px 7px black;
+}
+
+#placa1 p {
+	color: #fff;
+	text-align: center;
+	margin-top: 25px;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 1s;
+}
+
+#placa1 a:link, #placa1 a:visited, #placa1 a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+#placa1 p:hover {
+	transform: scale(1.1);
+}
+
+#bloque3 {
+	width: 100%;
+	height: 590px;
+	background-color: #fff;
+	background-image: url(../imagenes/testamento.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	grid-area: bloque3;
+}
+
+#placa2 {
+	width: 100%;
+	height: 150px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top: 200px;
+	padding-top: 29px;
+}
+
+#placa2 h1 {
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	text-shadow: 3px 3px 7px black;
+}
+
+#placa2 p {
+	color: #fff;
+	text-align: center;
+	margin-top: 10px;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 1s;
+}
+
+#placa2 p:hover {
+	transform: scale(1.2);
+}
+
+#bloque3 a:link, #bloque3 a:visited, #bloque3 a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+#banner {
+	width: 98%;
+	height: 200px;
+	background-color: #fff;
+	background-image: url(../imagenes/banner.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	grid-area: banner;
+	justify-self: center;
+	align-self: flex-end;
+	animation: slide 15s infinite;
+	
+}
+
+@keyframes slide {
+	33% {
+		background-image: url(/imagenes/banner1.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+	66% {
+		background-image: url(/imagenes/banner3.jpg);
+		background-position: bottom;
+		background-size: cover;
+	}
+	100% {
+		background-image: url(/imagenes/banner.jpg);
+	}
+}
+
+footer {
+	width: 100%;
+	grid-area: footer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer h2 {
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.modal-body img {
+	width: 100%;
+}
+
+#contenedor_video {
+	width: 502px;
+	height: 282px;
+	border: solid 1px white;
+	margin-top: 10px;
+}
+
+video {
+	width: 500px;
+	height: 280px;
+}
+
+#redes {
+	width: 200px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 10px;
+}
+
+#face {
+	width: 55px;
+	cursor: pointer;
+}
+
+#face img {
+	width: 55px;
+	transition-duration: 1s;
+}
+
+#face img:hover {
+	transform: rotate(360deg);
+}
+
+#tw {
+	width: 55px;
+	cursor: pointer;
+}
+
+#tw img {
+	width: 55px;
+	transition: 1s;
+}
+
+#tw img:hover {
+	transform: rotate(360deg);
+}
+
+#insta {
+	width: 55px;
+	cursor: pointer;
+}
+
+#insta img {
+	width: 55px;
+	transition-duration: 1s;
+}
+
+#insta img:hover {
+	transform: rotate(360deg);
+}
+
+/*BOTON PARA SUBIR*/
+
+#boton {
+	width: 90px;
+	height: 30px;
+	background-color: rgb(110 123 139 / 56%);
+	border-radius: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	position: fixed;
+	z-index: 101;
+	box-shadow: 4px 5px 7px 2px #000;
+}
+
+#boton p {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 550;
+	text-align: center;
+	margin-top: 1.5px;
+}
+
+#boton:hover {
+	background-color: rgb(26 24 24 / 96%);
+	border: 1px solid #fff;
+}
+
+/* #boton p:hover {
+	color: #ffffff;
+} */
+
+/*....... MEDIA QUERY.......*/
+
+@media (max-width: 941px) {
+	nav {
+		grid-template-areas: "sabrina" "ul";
+		grid-template-columns: 90%;
+		padding-bottom: 5px;
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+	ul {
+		justify-self: center;
+	}
+	#logo {
+		width: 250px;
+		top: 117px;
+	}
+	#logo img {
+		width: 228px;
+	}
+}
+
+@media (max-width: 927px) {
+	#placa1 h1 {
+		font-size: 30px;
+	}
+	#placa1 h2 {
+		font-size: 25px;
+		min-width: 338px;
+	}
+}
+
+@media (max-width: 910px) {
+	#bloque1 img {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 790px) {
+	main {
+		grid-template-areas: "bloque1 bloque1 bloque1" "bloque2 bloque2 bloque2" "bloque3 bloque3 bloque3" "banner banner banner";
+		height: auto;
+	}
+	#bloque1 {
+		height: auto;
+		padding: 0;
+	}
+	#bloque1>* {
+		background-color: #0000003d;
+		padding: 0 15px;
+	}
+	#bloque1 h1 {
+		padding-top: 10px;
+		margin: 0;
+	}
+	#bloque1 h2 {
+		margin-bottom: 0;
+		padding-bottom: 10px;
+	}
+}
+
+@media (max-width: 750px) {
+	nav {
+		padding-bottom: 0;
+		grid-template-areas: "sabrina check-btn" "ul ul";
+	}
+	.check-btn {
+		display: block;
+	}
+	ul {
+		position: fixed;
+		flex-direction: column;
+		height: 300px;
+		width: 50%;
+		background: rgba(0, 0, 0, 0.61);
+		top: 80px;
+		left: 100%;
+		text-align: center;
+		justify-content: space-around;
+	}
+	#check:checked~ul {
+		left: 50%;
+	}
+}
