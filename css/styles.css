@@ -12,6 +12,7 @@ body {
 	font-family: calibri;
 	display: grid;
 	grid-template-areas: "nav" "header" "main" "footer";
+	scroll-behavior: smooth;
 }
 
 nav {
@@ -85,7 +86,7 @@ nav h2 {
 	border-top: 1px solid rgba(243, 236, 236, 0.596);
 }
 
-ul li {
+nav ul li {
 	width: 115px;
 	height: 30px;
 	background-image: linear-gradient(to left, #1e130c00, #9a84788c);
@@ -97,9 +98,11 @@ ul li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: hover 1s ease;
+
 }
 
-ul li:hover {
+nav ul li:hover {
 	background-image: linear-gradient(to right, #1e130c00, #9a84788c);
 }
 
@@ -142,7 +145,7 @@ header {
 main {
 	width: 100%;
 	height: 850px;
-	background-image: url(/imagenes/fondo.jpg);
+	background-image: url(../imagenes/fondo.jpg);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -292,7 +295,7 @@ main {
 #banner {
 	width: 98%;
 	height: 200px;
-	background-color: #fff;
+	/* background-color: #fff; */
 	background-image: url(../imagenes/banner.jpg);
 	background-position: center center;
 	background-size: cover;
@@ -300,28 +303,29 @@ main {
 	grid-area: banner;
 	justify-self: center;
 	align-self: flex-end;
-	animation: slide 15s infinite;
+	animation: slide 9s infinite;
 	
 }
 
 @keyframes slide {
 	33% {
-		background-image: url(/imagenes/banner1.jpg);
+		background-image: url(../imagenes/banner1.jpg);
 		background-position: center;
 		background-size: cover;
 	}
 	66% {
-		background-image: url(/imagenes/banner3.jpg);
+		background-image: url(../imagenes/banner3.jpg);
 		background-position: bottom;
 		background-size: cover;
 	}
 	100% {
-		background-image: url(/imagenes/banner.jpg);
+		background-image: url(../imagenes/banner.jpg);
 	}
 }
 
 footer {
 	width: 100%;
+	height: 500px;
 	grid-area: footer;
 	display: flex;
 	flex-direction: column;
@@ -383,7 +387,7 @@ video {
 
 #tw img {
 	width: 55px;
-	transition: 1s;
+	transition-duration: 1s;
 }
 
 #tw img:hover {
@@ -432,10 +436,6 @@ video {
 	background-color: rgb(26 24 24 / 96%);
 	border: 1px solid #fff;
 }
-
-/* #boton p:hover {
-	color: #ffffff;
-} */
 
 /*....... MEDIA QUERY.......*/
 
